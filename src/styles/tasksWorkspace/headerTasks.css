@@ -1,0 +1,126 @@
+
+.header__desk {
+    background-color: #00000020;
+}
+.container {
+}
+.header__desk-wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 20px 18px 20px;
+}
+.header__desk-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.desk__name-title {
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 32px;
+    color: #fff;
+    min-width:95px;
+    padding-right: 20px;
+    margin: 0;
+}
+.desk__tasks_group-add_to_favorite-btn{
+    border: none;
+    background:none;
+    border-radius: 3px;
+    padding: 6px 10px;
+    transition: all 0.3s ease;
+}
+.desk__tasks_group-add_to_favorite-btn:hover{
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    background-color: #ffffff28;
+}
+.desk__add_to_favorite-icon {
+    min-height: 23px;
+    max-height: 23px;
+}
+.desk__tasks_group-private-btn{
+    border: none;
+    background:none;
+    border-radius: 3px;
+    padding: 6px 12px;
+    transition: all 0.3s ease;
+    
+}
+.desk__tasks_group-private-btn:hover{
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    background-color: #ffffff28;
+
+}
+.desk__private-icon {
+    min-height: 23px;
+    max-height: 23px;
+    color:#fff;
+}
+.filter__tasks_group {
+    display: none;
+}
+.desk__tasks_group-filter {
+}
+.icon__tasks_group-filter {
+}
+.selected__tasks_group-filter {
+}
+.expand__tasks_group-filter {
+}
+.header__desk-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.filter__tasks-btn{
+    display: flex;
+    background: none;
+    border: none;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    text-align: center;
+    margin-right: 20px;
+    padding: 7px;
+}
+.filter__tasks-btn:hover{
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    background-color: #ffffff3c;
+}
+.filter_tasks__icon {
+    min-height: 15px;
+    max-height: 20px;
+    padding-right: 7px;
+}
+.filter_tasks__text {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight:500;
+    color: #fff;
+    margin: 0;
+}
+.profile__btn {
+    min-height: 28px;
+    min-width: 28px;
+    border-radius: 50%;
+    border: none;
+    background-image: url(../../assets/images/hide_table.png);
+    margin-right: 20px;
+}
+.profile__btn-content {
+}
+.share__desk-btn {
+    display: flex;
+    background-color: #DCDFE4;
+    border: none;
+    border-radius: 3px;
+    padding: 10px;
+}
+.share__desk-btn:hover{
+    filter: brightness(1.5);
+}
+.share__desk-icon {
+
+}
+.share__desk-text {
+    margin: 0;
+}

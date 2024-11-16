@@ -1,0 +1,110 @@
+.header__workspace {
+}
+.container {
+}
+.header__items{
+    
+    display: flex;
+    justify-content: space-around;
+    margin: 0 181px;
+    gap: 11vw;
+    padding: 32px;
+}
+.workspace__info {
+    display: flex;
+}
+.workspace__icon {
+    size: 60px;
+    max-width: 60px;
+    max-height: 60px;
+    min-width: 60px;
+    min-height: 60px;
+    margin-right: 10px;
+    color: white;
+    background: linear-gradient(to bottom, #1F845A, #4BCE97); 
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-align: center;
+}
+.workspace__icon:hover{
+    opacity: 0.9;
+}
+.workspace__icon-link {
+    padding-top: 17px;
+}
+.workspace__icon-firstword {
+    font-size: 35px;
+    font-weight: bold;
+}
+.workspace__icon-img {
+}
+.workspace__info-wrapper{
+    display: flex;
+    flex-direction: column;
+
+}
+.workspace__info-text {
+    display: flex;
+    margin-top: 8px;
+}
+.workspace__name {
+    font-size: 20px;
+    line-height: 24px;
+    padding-right: 5px;
+    margin: 0;
+}
+.workspace__info-change-btn {
+    border: none;
+    background:none;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: box-shadow 0.3s ease;
+}
+.workspace__info-change-btn:hover{
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+.workspace__info-change-btn-icon {
+}
+.workspace__access {
+    display: flex;
+    margin-top: -10px;
+}
+.workspace__access-icon {
+    max-height: 16px;
+    max-width: 16px;
+    padding-right: 2px;
+    margin-top:12px
+}
+.workspace__access-text {
+    color: #44546F;
+    font-size: 12px;
+    line-height: 20px;
+}
+.add__user {
+}
+.add__user-btn {
+    color: #fff;
+    min-height: 32px;
+    
+    display: flex;
+    gap: 8px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 7px 12px;
+    align-items: center;
+    background-color: #0C66E4;
+    transition: filter 0.3s ease;
+}
+.add__user-btn:hover{
+    filter: brightness(0.8);
+}
+.add__user-icon {
+}
+.add__user-text {
+    margin: 0;
+}

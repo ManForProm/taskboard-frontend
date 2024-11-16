@@ -1,0 +1,33 @@
+@media (max-width:580px) {
+    .desks__search-input {
+        width: 120px;
+      }
+}
+
+@media (max-width:435px) {
+  .header__items {
+    padding: 0;
+    margin: 0 0px;
+  }
+  .add__user {
+    display: none;
+  }
+  .desks__filter {
+    display: block;
+  }
+}
+
+@media (max-width:320px) {
+  .desks__filter {
+    text-align: center;
+  }
+  .desks__sortfilter-wrapper {
+    display: block;
+  }
+  .desks__group {
+    text-align: center;
+  }
+  .desks__sort-selection {
+    width: 120px;
+  }
+}
