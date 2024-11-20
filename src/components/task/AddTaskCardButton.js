@@ -5,7 +5,7 @@ import addGroupTasksIcon from '../../assets/images/plusWhite.svg';
 export const AddTaskCardButton = () => (
     <div className="add__group_tasks">
                     <button className="add__group_tasks-btn">
-                        <img src = {addGroupTasksIcon} alt="" class="add__group_tasks-icon"/>
+                        <img src = {addGroupTasksIcon} alt="" className="add__group_tasks-icon"/>
                         <p className="add__group_tasks-title">Добавьте еще одну колонку</p>
                     </button>
                 </div>

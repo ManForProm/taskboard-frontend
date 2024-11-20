@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { createTask, getTaskGroup } from "../../../services/taskService.js";
+import { createTask, dragTaskToAnotherTaskGroupApi, getTaskGroup } from "../../../services/taskService.js";
 import { networkCases } from '../../../utils/networkCases.js';
 
 
@@ -12,6 +12,12 @@ export const getTaskGroups = createAsyncThunk("tasks/getTasks", async () => {
 export const addTask = createAsyncThunk("tasks/addTask", async (newTask) => {
   const response = await createTask(newTask);
   return response.data;
+});
+
+export const dragTaskToAnotherTaskGroup = createAsyncThunk("tasks/dragTaskToAnotherTaskGroup", async(taskId,taskGroupId,newTaskGroupId) => {
+  const response = await dragTaskToAnotherTaskGroupApi(taskId,taskGroupId,newTaskGroupId);
+  return response.data;
+
 });
 
 

@@ -1,10 +1,16 @@
 import React from "react";
 
-export const Task = ({taskText}) => (
-  <div class="task__wrapper">
-    <div class="task__flags"></div>
-    <d class="task__content">
-      <p class="task__text">{taskText}</p>
-    </d>
-  </div>
-);
+export const Task = ({ taskText, onDragStart}) => {
+  return (
+    <div
+      className="task__wrapper"
+      draggable
+      onDragStart={(e) => onDragStart(e,)}
+    >
+      <div className="task__flags"></div>
+      <d className="task__content">
+        <p className="task__text">{taskText}</p>
+      </d>
+    </div>
+  );
+};

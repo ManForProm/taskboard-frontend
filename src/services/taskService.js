@@ -9,3 +9,7 @@ export const getTaskGroup = () => {
 export const createTask = (newTask) => {
   return axios.post(`${API_URL}task`, newTask);
 };
+
+export const dragTaskToAnotherTaskGroupApi = (taskId,taskGroupId,newTaskGroupId) => {
+  return axios.post(`${API_URL}task`,taskId)
+}

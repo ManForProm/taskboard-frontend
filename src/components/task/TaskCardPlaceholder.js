@@ -4,7 +4,7 @@ import '../../styles/tasksWorkspace/taskCard.css';
 export const TaskCardPlaceHolder = () => {
 
   return (
-    <div class="tasks_group__placeholder">
+    <div className="tasks_group__placeholder">
         
     </div>
   );

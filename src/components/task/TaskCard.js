@@ -4,43 +4,43 @@ import expandTaskGroupIcon from '../../assets/images/expand_task_group.svg';
 import '../../styles/tasksWorkspace/taskCard.css';
 import { Task } from "./Task";
 
-export const TaskCard = ({tasks}) => {
+export const TaskCard = ({tasks,onDragStart}) => {
 
   return (
-    <div class="tasks_group">
-      <div class="tasks_group__header">
+    <div className="tasks_group">
+      <div className="tasks_group__header">
         <textarea
           type="text"
-          class="tasks_group__header-title"
+          className="tasks_group__header-title"
           placeholder="Введите новое имя"
         ></textarea>
-        <div class="tasks_group__header-wrapper">
-          <button class="tasks_group__header-expand">
+        <div className="tasks_group__header-wrapper">
+          <button className="tasks_group__header-expand">
             <img
               src={expandTaskGroupIcon}
               alt=""
-              class="tasks_group__header-expand_icon"
+              className="tasks_group__header-expand_icon"
             />
           </button>
-          <button class="tasks_group__header-settings">
+          <button className="tasks_group__header-settings">
             <img
               src={dotsSettingsIcon}
               alt=""
-              class="tasks_group__header-settings_icon"
+              className="tasks_group__header-settings_icon"
             />
           </button>
         </div>
       </div>
-      <div class="tasks_group__tasks">
+      <div className="tasks_group__tasks">
         {tasks.map( (task )=> (
-            <Task taskText={task.title}/>
+            <Task taskText={task.title} onDragStart={onDragStart(task.id)}/>
         )
         )}
       </div>
-      <div class="tasks_group__footer">
-        <button class="add__task">
-          <img src="../assets/images/plus.svg" alt="" class="add__task-icon" />
-          <p class="add__task-text">Добавить карточку</p>
+      <div className="tasks_group__footer">
+        <button className="add__task">
+          <img src="../assets/images/plus.svg" alt="" className="add__task-icon" />
+          <p className="add__task-text">Добавить карточку</p>
         </button>
       </div>
     </div>

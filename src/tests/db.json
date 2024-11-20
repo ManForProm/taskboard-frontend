@@ -23,7 +23,7 @@
     {
       "id": "101",
       "name": "Микро-доска 1",
-      "parentDeskId": "1",
+      "parentBoardId": "1",
       "description": "Подразделение первой доски.",
       "tasks":[
         {
@@ -59,7 +59,7 @@
     {
       "id": "102",
       "name": "Микро-доска 2",
-      "parentDeskId": "1",
+      "parentBoardId": "1",
       "description": "Вторая часть первой доски.",
       "tasks":[
         {
@@ -81,7 +81,7 @@
     {
       "id": "201",
       "name": "Микро-доска 1 второй доски",
-      "parentDeskId": "2",
+      "parentBoardId": "2",
       "description": "Подразделение второй доски.",
       "tasks":[
         {
