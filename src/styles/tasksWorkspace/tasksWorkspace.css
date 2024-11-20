@@ -1,6 +1,7 @@
 
-body {
+.tasks-page__wrapper {
     background-color: #0072b4;
+    height: 300vh;
   }
 .desk__workspace {
 }

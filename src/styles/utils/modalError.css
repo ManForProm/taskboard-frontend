@@ -1,0 +1,16 @@
+
+.modal__error{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ff00002b;
+    padding: 20px;
+    border-radius: 20px;
+}
+.modal__error-message{
+    color:#d14949
+
+}
+.modal__error-btn{
+    background-color: #d14949;
+}

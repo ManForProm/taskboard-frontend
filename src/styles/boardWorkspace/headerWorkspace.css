@@ -84,7 +84,12 @@
     font-size: 12px;
     line-height: 20px;
 }
-.add__user {
+
+.add__user-btn {
+    background-color: #0C66E4; 
+  }
+  
+/* .add__user {
 }
 .add__user-btn {
     color: #fff;
@@ -107,4 +112,4 @@
 }
 .add__user-text {
     margin: 0;
-}
+} */
