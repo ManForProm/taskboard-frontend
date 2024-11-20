@@ -1,5 +1,8 @@
 import React from "react";
+import inviteIcon from '../../assets/images/add_someone.svg';
 import "../../styles/boardWorkspace/headerWorkspace.css";
+import LogoutButton from "../login/LogoutButton";
+import ButtonWrapper from "../utils/ButtonWrapper";
 
 export const BoardsHeader = () => (
   <header className="header__workspace">
@@ -41,18 +44,14 @@ export const BoardsHeader = () => (
             </div>
           </div>
         </div>
-        <div className="add__user">
-          <button className="add__user-btn">
-            <img
-              src="../assets/images/add_someone.svg"
-              alt=""
-              className="add__user-icon"
-            />
-            <p className="add__user-text">
-              Пригласите пользователей в рабочее пространство
-            </p>
-          </button>
-        </div>
+        <ButtonWrapper
+          onClick={(e) => e.preventDefault()}
+          iconSrc={inviteIcon}
+          altText="icon"
+          buttonText="Пригласите пользователей в рабочее пространство"
+          className="invite-to-desk"
+        />
+        <LogoutButton/>
       </div>
     </div>
   </header>

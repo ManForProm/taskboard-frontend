@@ -1,9 +1,10 @@
 import React from "react";
-import '../../styles/boardWorkspace/boardCard.css';
+import favoriteIcon from '../../assets/images/favorite.svg';
+import "../../styles/boardWorkspace/boardCard.css";
 
-export const BoardCard = () => (
-    <a href="../subpackages/deskWorkspace.html" class="desk__group-desk">
-            <p class="desk__title">Важно</p>
-            <img src="../assets/images/favorite.svg" alt="" class="desk__group-desk_icon"/>
-          </a>
-)
+export const BoardCard = ({ board }) => (
+  <div className="desk__group-desk">
+    <p className="desk__title">{board.name}</p>
+    <img src={favoriteIcon} alt="" class="desk__group-desk_icon"></img>
+  </div>
+);

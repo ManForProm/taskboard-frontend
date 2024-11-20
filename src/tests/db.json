@@ -1,0 +1,134 @@
+{
+  "desks": [
+    {
+      "id": "1",
+      "name": "Первая доска",
+      "createdAt": "2024-01-01T10:00:00Z",
+      "updatedAt": "2024-01-02T12:00:00Z",
+      "priority": 1,
+      "description": "Это моя первая доска.",
+      "owner": { "id": "101", "name": "Иван Иванов" }
+    },
+    {
+      "id": "2",
+      "name": "Вторая доска",
+      "createdAt": "2024-01-03T11:00:00Z",
+      "updatedAt": "2024-01-04T14:00:00Z",
+      "priority": 2,
+      "description": "Это моя вторая доска.",
+      "owner": { "id": "102", "name": "Петр Петров" }
+    }
+  ],
+  "tasksGroups": [
+    {
+      "id": "101",
+      "name": "Микро-доска 1",
+      "parentDeskId": "1",
+      "description": "Подразделение первой доски.",
+      "tasks":[
+        {
+          "id": "1",
+          "title": "Сделать уборку",
+          "description": "Навести порядок на рабочем столе.",
+          "status": "todo",
+          "dueDate": "2024-01-05T15:00:00Z",
+          "deskId": "1",
+          "miniDeskId": "101",
+          "notification": {
+            "time": "2024-01-05T14:00:00Z",
+            "type": "email",
+            "message": "Напоминание: Сделать уборку!"
+          }
+        },
+        {
+          "id": "2",
+          "title": "Написать отчет",
+          "description": "Отправить отчет о выполненной работе.",
+          "status": "in-progress",
+          "dueDate": "2024-01-06T12:00:00Z",
+          "deskId": "1",
+          "miniDeskId": "101",
+          "notification": {
+            "time": "2024-01-06T11:00:00Z",
+            "type": "push",
+            "message": "Не забудьте написать отчет."
+          }
+        }
+      ]
+    },
+    {
+      "id": "102",
+      "name": "Микро-доска 2",
+      "parentDeskId": "1",
+      "description": "Вторая часть первой доски.",
+      "tasks":[
+        {
+          "id": "3",
+          "title": "Созвон с клиентом",
+          "description": "Обсудить новый проект.",
+          "status": "done",
+          "dueDate": "2024-01-04T18:00:00Z",
+          "deskId": "1",
+          "miniDeskId": "102",
+          "notification": {
+            "time": "2024-01-04T17:45:00Z",
+            "type": "popup",
+            "message": "Время для звонка с клиентом!"
+          }
+        }
+      ]
+    },
+    {
+      "id": "201",
+      "name": "Микро-доска 1 второй доски",
+      "parentDeskId": "2",
+      "description": "Подразделение второй доски.",
+      "tasks":[
+        {
+          "id": "4",
+          "title": "Подготовить презентацию",
+          "description": "Создать слайды для новой идеи.",
+          "status": "todo",
+          "dueDate": "2024-01-10T10:00:00Z",
+          "deskId": "2",
+          "miniDeskId": "201",
+          "notification": {
+            "time": "2024-01-09T18:00:00Z",
+            "type": "email",
+            "message": "Ваша презентация должна быть готова к завтрашнему дню."
+          }
+        },
+        {
+          "id": "5",
+          "title": "Закупить материалы",
+          "description": "Купить бумагу и маркеры.",
+          "status": "in-progress",
+          "dueDate": "2024-01-09T16:00:00Z",
+          "deskId": "2",
+          "miniDeskId": "201",
+          "notification": {
+            "time": "2024-01-09T14:00:00Z",
+            "type": "sms",
+            "message": "Напоминание: Закупить материалы."
+          }
+        },
+        {
+          "id": "6",
+          "title": "Обучить стажера",
+          "description": "Провести вводный тренинг.",
+          "status": "done",
+          "dueDate": "2024-01-08T09:00:00Z",
+          "deskId": "2",
+          "miniDeskId": "201",
+          "notification": {
+            "time": "2024-01-08T08:30:00Z",
+            "type": "push",
+            "message": "Время провести тренинг для стажера."
+          }
+        }
+      ]
+    }
+  ],
+  "currentBoard": null,
+  "status": "idle"
+}
