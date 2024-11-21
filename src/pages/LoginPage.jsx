@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import ButtonWrapper from "../components/utils/ButtonWrapper.js";
+import LoadingSpinner from "../components/utils/LoadingSpinner.js";
 import { login } from "../redux/slices/auth/authSlice.js";
+import { loginService } from "../services/loginService.js";
 import "../styles/login/login.css";
 
 export const LoginPage = () => {
@@ -9,14 +12,20 @@ export const LoginPage = () => {
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleLogin = () => {
-    if (username === "admin" && password === "1234") {
-      localStorage.setItem("isAuthenticated", "true");
-      dispatch(login());
+  const handleLogin = async () => {
+    setIsLoading(true);
+    try {
+      const token = await loginService(username, password);
+      localStorage.setItem("token", token);
+
+      dispatch(login({ token }));
       navigate("/");
-    } else {
-      alert("Неверное имя пользователя или пароль!");
+    } catch (error) {
+      alert(error.message);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -31,7 +40,7 @@ export const LoginPage = () => {
         }}
       >
         <div className="login__form-group">
-          <label className="login__label">Имя пользователя:</label>
+          <label className="login__label">Email:</label>
           <input
             type="text"
             className="login__input"
@@ -48,9 +57,9 @@ export const LoginPage = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        <button type="submit" className="login__button">
-          Войти
-        </button>
+        {isLoading ? <div className="spinner__wrapper"> <LoadingSpinner size={50} color="#3498db" /> </div> : (
+          <ButtonWrapper type={"submit"} buttonText="Войти" className="login" />
+        )}
       </form>
     </div>
   );

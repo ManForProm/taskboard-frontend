@@ -60,3 +60,8 @@
   .login__button:hover {
     background-color: #005A92; /* Более тёмный синий */
   }
+  .spinner__wrapper{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
