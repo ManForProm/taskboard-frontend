@@ -9,6 +9,8 @@ export const BoardCard = ({ board }) => {
   const handleBoardClick = (boardId) => {
     navigate(`/board/${boardId}`);
   };
+  
+  console.log(board);
   return (
     <div className="desk__group-desk" onClick={() => handleBoardClick(board.id)}>
       <p className="desk__title">{board.name}</p>

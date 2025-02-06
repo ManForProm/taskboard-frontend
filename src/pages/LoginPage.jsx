@@ -13,6 +13,7 @@ export const LoginPage = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false);
+  const [isLoginState, setIsLoginState] = useState("login");
 
   const handleLogin = async () => {
     setIsLoading(true);
@@ -29,6 +30,10 @@ export const LoginPage = () => {
     }
   };
 
+  const handelRegister = async () => {
+
+  }
+
   return (
     <div className="login">
       <h1 className="login__title">Вход</h1>
@@ -36,7 +41,7 @@ export const LoginPage = () => {
         className="login__form"
         onSubmit={(e) => {
           e.preventDefault();
-          handleLogin();
+          isLoginState === "register" ? handelRegister() : handleLogin()
         }}
       >
         <div className="login__form-group">
@@ -57,10 +62,37 @@ export const LoginPage = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        {isLoading ? <div className="spinner__wrapper"> <LoadingSpinner size={50} color="#3498db" /> </div> : (
-          <ButtonWrapper type={"submit"} buttonText="Войти" className="login" />
+        {isLoading ? (
+          <div className="spinner__wrapper">
+            <LoadingSpinner size={50} color="#3498db" />
+          </div>
+        ) : (
+          <>
+            <ButtonWrapper
+              type={"submit"}
+              buttonText="Войти"
+              className="login"
+              onClick={() => setIsLoginState("login")}
+            />
+            <ButtonWrapper
+              type={"submit"}
+              buttonText="Зарегестрироваться"
+              className="register"
+              onClick={() => setIsLoginState("register")}
+            />
+          </>
         )}
       </form>
+{/*       
+      <div className="login__register">
+        <p>Нет аккаунта?</p>
+        <button
+          className="login__register-button"
+          onClick={() => navigate("/register")}
+        >
+          Зарегистрироваться
+        </button>
+      </div> */}
     </div>
   );
 };

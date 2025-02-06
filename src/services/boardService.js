@@ -1,10 +1,16 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:3001/desks"; 
+const API_URL = "http://localhost:3003/board/"; 
 
 // Get desks list
 export const fetchBoards = async () => {
-  const response = await axios.get(API_URL);
+  const token = localStorage.getItem("authToken")
+  // const id = 'f2479ed7-e169-4a7a-bb1a-42e544c978c7'
+  const response = await axios.get(`${API_URL}`, {
+    headers:{
+      Authorization: `Bearer ${token}`
+    }
+  });
   return response.data;
 };
 

@@ -47,12 +47,15 @@ export const BoardCardGroups = () => {
       />
     );
   }
-
   return (
     <div className="desk__group-desks">
       <AddNewBoardModal isOpen={isModalOpen} onClose={handleCloseModal} />
       <AddNewBoardCard onClick={handleOpenModal} />
-      {boards.map((board) => <BoardCard key={board.id} board={board} /> )}
+      { 
+      Object.keys(boards).map((key) => (
+        <BoardCard key={boards[key].id} board={boards[key]} />
+      ))
+      }
     </div>
   );
 };
